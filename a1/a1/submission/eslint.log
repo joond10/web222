@@ -1,0 +1,21 @@
+
+> web222-assignment-1@6.0.0 eslint
+> eslint src/**/*.js
+
+
+C:\Users\joond\OneDrive\Documents\WEB222\a1\a1\src\solutions.js
+  140:22  error  'name' is defined but never used          no-unused-vars
+  140:28  error  'uppercase' is defined but never used     no-unused-vars
+  195:24  error  'rel' is defined but never used           no-unused-vars
+  195:29  error  'href' is defined but never used          no-unused-vars
+  250:26  error  'value' is defined but never used         no-unused-vars
+  291:23  error  'value' is defined but never used         no-unused-vars
+  291:30  error  'format' is defined but never used        no-unused-vars
+  323:24  error  'value' is defined but never used         no-unused-vars
+  352:25  error  'values' is defined but never used        no-unused-vars
+  481:27  error  'resourceType' is defined but never used  no-unused-vars
+  481:41  error  'resourceId' is defined but never used    no-unused-vars
+  481:53  error  'extraData' is defined but never used     no-unused-vars
+
+✖ 12 problems (12 errors, 0 warnings)
+
