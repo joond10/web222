@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 6 Example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <figure>
+      <!-- Encapsulate imgs in here with multiple files types! optional -->
+      <picture>
+        <source srcset="insert other file type with path" type="image/webp" />
+        <img
+          width="500px"
+          src="img/DowntownNorthYork20150914.jpg"
+          alt="Downtown North York"
+        />
+      </picture>
+
+      <figcaption>Photo by Tyson Phan</figcaption>
+    </figure>
+
+    <h1>M2N: Willowdale, North York</h1>
+    <!-- We don't use a table for layout but strictly for data representation-->
+
+    <!-- 
+    tr = table row  (row)
+    td = table data (cell)
+    th = table heading (column name)
+  -->
+    <table>
+      <caption>
+        Cases by Age Group for FSA M2N
+      </caption>
+      <!-- Header at the top -->
+      <thead>
+        <tr>
+          <th>Age group</th>
+          <th>Cases</th>
+        </tr>
+      </thead>
+      <!-- All the rows in the table-->
+      <tbody>
+        <tr>
+          <td>Unknown</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Under 19</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>20 to 29</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>30 to 39</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>40 to 49</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>50 to 59</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>60 to 69</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>70 to 79</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>80 to 89</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>90 and older</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+      <!-- The bottom of the table -->
+      <!-- Make a footer span over 2 columns "colspan"/"rowspan"-->
+      <tfoot>
+        <tr>
+          <th colspan="2">Source: Toronto Public Health Open Data</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- David recommends our script elements be kept at the bottom of our html file -->
+    <!-- Essentially we just include them here and have the functionality in script.js -->
+
+    <canvas id="chart"></canvas>
+    <!-- External script to a chart library from the internet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- External script to a local file, preferred method and recommended to be kept at the bottom. parsed based on order-->
+    <script src="script.js"></script>
+  </body>
+</html>
