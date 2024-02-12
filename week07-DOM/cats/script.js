@@ -26,14 +26,13 @@ window.onload = function () {
   // Call the loadCatPicture function again in 5s
   setTimeout(loadCatPicture, 5 * 1_000 /* 5s = 5000ms */);
   //Load cat picture every click
-  window.onclick = loadCatPicture;
 };
 
 //Practice with grabbing elements and creating elements
 let header = document.createElement("h1");
-let button = document.getElementById("btn");
-let title = document.getElementById("title");
-let box = document.getElementById("buttonbox");
+let button = document.querySelector("#btn");
+let title = document.querySelector("#title");
+let box = document.querySelector("#buttonbox");
 
 //Practice with onclick property and event handling
 button.onclick = function () {
@@ -42,3 +41,18 @@ button.onclick = function () {
   header.innerText = "Appending text";
   box.appendChild(header);
 };
+
+let header2 = document.createElement("h1");
+header2.innerText = "100";
+
+function decrease() {
+  let number = parseInt(header2.innerText);
+  number--;
+  header2.innerText = number;
+}
+
+window.onclick = function () {
+  header2.innerText++;
+  titlebox.appendChild(header2);
+};
+setInterval(decrease, 250);
