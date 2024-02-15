@@ -56,3 +56,43 @@ window.onclick = function () {
   titlebox.appendChild(header2);
 };
 setInterval(decrease, 250);
+
+function loadCatPicture(filter) {
+  let url = "https://cataas.com/cat";
+  let img = document.getElementById("cat-picture");
+
+  // If the function is called with a filter argument, add that to URL
+  if (filter) {
+    console.log("Using cat picture filter", filter);
+    url += `?filter=${filter}`;
+  }
+
+  img.src = url;
+}
+
+let poemText = document.getElementById("poem-text");
+poemText.onclick = function () {
+  loadCatPicture();
+};
+
+window.onkeypress = function (event) {
+  let keyName = event.key;
+  console.log("Key Press event", keyName);
+
+  switch (keyName) {
+    case "b":
+      return loadCatPicture("blur");
+    case "m":
+      return loadCatPicture("mono");
+    case "s":
+      return loadCatPicture("sepia");
+    case "n":
+      return loadCatPicture("negative");
+    case "p":
+      return loadCatPicture("paint");
+    case "x":
+      return loadCatPicture("pixel");
+    default:
+      console.log("Ignoring key press event");
+  }
+};
