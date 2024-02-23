@@ -8,8 +8,8 @@
  *
  * Please update the following with your information:
  *
- *      Name:       <YOUR_NAME>
- *      Student ID: <YOUR_STUDENT_ID>
+ *      Name:       <Joon Dong>
+ *      Student ID: <036262152>
  *      Date:       <SUBMISSION_DATE>
  */
 
