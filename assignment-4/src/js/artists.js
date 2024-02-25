@@ -13,7 +13,7 @@ window.artists = [
       { url: "https://www.instagram.com/oneheartisok/", name: "Instagram" },
       { url: "https://www.youtube.com/@oneheartt", name: "YouTube Channel" }
     ]
-  }
+  },
   {
     artistID: "AID-2",
     name: "Antent",
@@ -21,7 +21,7 @@ window.artists = [
       { url: "https://www.instagram.com/antentofficial/", name: "Instagram" },
       { url: "https://www.youtube.com/@Antent", name: "YouTube Channel" }
     ]
-  }
+  },
   {
     artistID: "AID-3",
     name: "lmnl",

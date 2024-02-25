@@ -14,7 +14,7 @@ window.songs = [
     duration: 124,
     url: "https://www.youtube.com/watch?v=LlN8MPS7KQs",
     explicit: false
-  }
+  },
   {
     songId: "SID-2",
     artistId: "AID-1",
@@ -23,7 +23,7 @@ window.songs = [
     duration: 118,
     url: "https://www.youtube.com/watch?v=FgjA9EuxIlY",
     explicit: false
-  }
+  },
   {
     songId: "SID-3",
     artistId: "AID-1",
@@ -32,7 +32,7 @@ window.songs = [
     duration: 94,
     url: "https://www.youtube.com/watch?v=J4RxO3lRsi0",
     explicit: false
-  }
+  },
   {
     songId: "SID-4",
     artistId: "AID-1",
@@ -41,7 +41,7 @@ window.songs = [
     duration: 99,
     url: "https://www.youtube.com/watch?v=C42iSY6Y9g0",
     explicit: false
-  }
+  },
   {
     songId: "SID-5",
     artistId: "AID-1",
@@ -50,7 +50,7 @@ window.songs = [
     duration: 110,
     url: "https://www.youtube.com/watch?v=gSwi1Tk1gV8",
     explicit: false
-  }
+  },
   {
     songId: "SID-6",
     artistId: "AID-1",
@@ -59,7 +59,7 @@ window.songs = [
     duration: 132,
     url: "https://www.youtube.com/watch?v=mmawPTFvvd8",
     explicit: true
-  }
+  },
   {
     songId: "SID-7",
     artistId: "AID-1",
@@ -68,7 +68,7 @@ window.songs = [
     duration: 123,
     url: "https://www.youtube.com/watch?v=dJL229efkbk",
     explicit: true
-  }
+  },
   {
     songId: "SID-8",
     artistId: "AID-2",
@@ -77,7 +77,7 @@ window.songs = [
     duration: 138,
     url: "https://www.youtube.com/watch?v=_EJL1XIh0d4",
     explicit: false
-  }
+  },
   {
     songId: "SID-9",
     artistId: "AID-2",
@@ -86,7 +86,7 @@ window.songs = [
     duration: 137,
     url: "https://www.youtube.com/watch?v=hHTmlTiagLI",
     explicit: false
-  }
+  },
   {
     songId: "SID-10",
     artistId: "AID-2",
@@ -95,7 +95,7 @@ window.songs = [
     duration: 147,
     url: "https://www.youtube.com/watch?v=r9k74AGYZoU",
     explicit: false
-  }
+  },
   {
     songId: "SID-11",
     artistId: "AID-2",
@@ -104,7 +104,7 @@ window.songs = [
     duration: 124,
     url: "https://www.youtube.com/watch?v=mrdmGAGIbXA",
     explicit: false
-  }
+  },
   {
     songId: "SID-12",
     artistId: "AID-2",
@@ -113,7 +113,7 @@ window.songs = [
     duration: 129,
     url: "https://www.youtube.com/watch?v=bWq2B5SRHR0",
     explicit: false
-  }
+  },
   {
     songId: "SID-13",
     artistId: "AID-2",
@@ -122,7 +122,7 @@ window.songs = [
     duration: 201,
     url: "https://www.youtube.com/watch?v=4hqqk0zlz_M",
     explicit: true
-  }
+  },
   {
     songId: "SID-14",
     artistId: "AID-2",
@@ -131,7 +131,7 @@ window.songs = [
     duration: 146,
     url: "https://www.youtube.com/watch?v=WNBMp3WyzKM",
     explicit: true
-  }
+  },
   {
     songId: "SID-15",
     artistId: "AID-2",
@@ -140,7 +140,7 @@ window.songs = [
     duration: 149,
     url: "https://www.youtube.com/watch?v=GMSTSoQP3j0",
     explicit: false
-  }
+  },
   {
     songId: "SID-16",
     artistId: "AID-2",
@@ -149,7 +149,7 @@ window.songs = [
     duration: 177,
     url: "https://www.youtube.com/watch?v=4yBQ82kLrZM",
     explicit: false
-  }
+  },
   {
     songId: "SID-17",
     artistId: "AID-3",
@@ -158,7 +158,7 @@ window.songs = [
     duration: 142,
     url: "https://www.youtube.com/watch?v=gHT35ypmotg",
     explicit: false
-  }
+  },
   {
     songId: "SID-18",
     artistId: "AID-3",
@@ -167,7 +167,7 @@ window.songs = [
     duration: 145,
     url: "https://www.youtube.com/watch?v=GWmjyMo9Pm8",
     explicit: false
-  }
+  },
   {
     songId: "SID-19",
     artistId: "AID-3",
@@ -176,7 +176,7 @@ window.songs = [
     duration: 122,
     url: "https://www.youtube.com/watch?v=UFNdH_7uqQs",
     explicit: false
-  }
+  },
   {
     songId: "SID-20",
     artistId: "AID-3",
