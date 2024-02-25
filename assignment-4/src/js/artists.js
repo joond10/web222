@@ -11,7 +11,7 @@ window.artists = [
     name: "Oneheart",
     url: [
       { url: "https://www.instagram.com/oneheartisok/", name: "Instagram" },
-      { url: "https://www.youtube.com/@oneheartt", name: "Youtube" }
+      { url: "https://www.youtube.com/@oneheartt", name: "YouTube Channel" }
     ]
   }
   {
@@ -19,7 +19,7 @@ window.artists = [
     name: "Antent",
     url: [
       { url: "https://www.instagram.com/antentofficial/", name: "Instagram" },
-      { url: "https://www.youtube.com/@Antent", name: "Youtube" }
+      { url: "https://www.youtube.com/@Antent", name: "YouTube Channel" }
     ]
   }
   {
@@ -27,7 +27,7 @@ window.artists = [
     name: "lmnl",
     url: [
       { url: "https://www.instagram.com/yourpastreality/", name: "Instagram" },
-      { url: "https://www.youtube.com/channel/UCeQwynIb6moziR0I2xnKwYwt", name: "Youtube" }
+      { url: "https://www.youtube.com/channel/UCeQwynIb6moziR0I2xnKwYwt", name: "YouTube Channel" }
     ]
   }
 ];

@@ -123,4 +123,67 @@ window.songs = [
     url: "https://www.youtube.com/watch?v=4hqqk0zlz_M",
     explicit: true
   }
+  {
+    songId: "SID-14",
+    artistId: "AID-2",
+    title: "night drive",
+    year: "2023",
+    duration: 146,
+    url: "https://www.youtube.com/watch?v=WNBMp3WyzKM",
+    explicit: true
+  }
+  {
+    songId: "SID-15",
+    artistId: "AID-2",
+    title: "touch",
+    year: "2023",
+    duration: 149,
+    url: "https://www.youtube.com/watch?v=GMSTSoQP3j0",
+    explicit: false
+  }
+  {
+    songId: "SID-16",
+    artistId: "AID-2",
+    title: "Stay",
+    year: "2023",
+    duration: 177,
+    url: "https://www.youtube.com/watch?v=4yBQ82kLrZM",
+    explicit: false
+  }
+  {
+    songId: "SID-17",
+    artistId: "AID-3",
+    title: "safe again",
+    year: "2023",
+    duration: 142,
+    url: "https://www.youtube.com/watch?v=gHT35ypmotg",
+    explicit: false
+  }
+  {
+    songId: "SID-18",
+    artistId: "AID-3",
+    title: "snow dream",
+    year: "2023",
+    duration: 145,
+    url: "https://www.youtube.com/watch?v=GWmjyMo9Pm8",
+    explicit: false
+  }
+  {
+    songId: "SID-19",
+    artistId: "AID-3",
+    title: "how it was",
+    year: "2024",
+    duration: 122,
+    url: "https://www.youtube.com/watch?v=UFNdH_7uqQs",
+    explicit: false
+  }
+  {
+    songId: "SID-20",
+    artistId: "AID-3",
+    title: "mist",
+    year: "2023",
+    duration: 190,
+    url: "https://www.youtube.com/watch?v=iqeHbW_85Cg",
+    explicit: false
+  }
 ];
