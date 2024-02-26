@@ -26,7 +26,7 @@ function createArtistButton(artist) {
   return artistButton;
 }
 
-function appendArtistButtonToNav(artistButton) {
+function addToNav(artistButton) {
   let nav = document.querySelector("#menu");
   nav.appendChild(artistButton);
 }
@@ -66,38 +66,43 @@ function convertDuration(duration) {
   return (duration = minutes + ":" + seconds);
 }
 
+function songDataOnClick(artistID) {
+  //Move event listener function here
+  let table = document.querySelector("#songs");
+  table.innerHTML = "";
+
+  window.songs.forEach(function (song) {
+    let row = document.createElement("tr");
+    let songTitle = document.createElement("a");
+    let yearRecorded = document.createElement("td");
+    let duration = document.createElement("td");
+    if (song.artistId === artistID && !song.explicit) {
+      songTitle.textContent = song.title;
+      songTitle.href = song.url;
+      songTitle.target = "_blank";
+      yearRecorded.textContent = song.year;
+      duration.textContent = convertDuration(song.duration);
+      row.appendChild(songTitle);
+      row.appendChild(yearRecorded);
+      row.appendChild(duration);
+      table.appendChild(row);
+      row.onclick = function () {
+        console.log(song.title);
+      };
+    }
+  });
+}
+
 function displaySongInfo(artistButton, artistID) {
   artistButton.addEventListener("click", function () {
-    let table = document.querySelector("#songs");
-    table.innerHTML = "";
-
-    window.songs.forEach(function (song) {
-      let row = document.createElement("tr");
-      let songTitle = document.createElement("a");
-      let yearRecorded = document.createElement("td");
-      let duration = document.createElement("td");
-      if (song.artistId === artistID && !song.explicit) {
-        songTitle.textContent = song.title;
-        songTitle.href = song.url;
-        songTitle.target = "_blank";
-        yearRecorded.textContent = song.year;
-        duration.textContent = convertDuration(song.duration);
-        row.appendChild(songTitle);
-        row.appendChild(yearRecorded);
-        row.appendChild(duration);
-        table.appendChild(row);
-        row.onclick = function () {
-          console.log(song.title);
-        };
-      }
-    });
+    songDataOnClick(artistID);
   });
 }
 
 function makeButtons() {
   window.artists.forEach(function (artist) {
     let artistButton = createArtistButton(artist);
-    appendArtistButtonToNav(artistButton);
+    addToNav(artistButton);
     displayArtistInfo(artistButton, artist);
     displaySongInfo(artistButton, artist.artistID);
   });
