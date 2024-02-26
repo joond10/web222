@@ -47,20 +47,39 @@ function createSocialLinks(artist, selectedArtist) {
 
     if (index < artist.url.length - 1) {
       socials.textContent = link.name + ",";
+      selectedArtist.appendChild(socials);
+      selectedArtist.appendChild(document.createTextNode(" "));
     } else {
       socials.textContent = link.name;
-    }
-
-    selectedArtist.appendChild(socials);
-
-    if (index < artist.url.length - 1) {
-      selectedArtist.appendChild(document.createTextNode(" "));
+      selectedArtist.appendChild(socials);
+      selectedArtist.appendChild(document.createTextNode(")"));
     }
   });
 }
 
-function displaySongs() {
-  window.songs.forEach(function (songs) {});
+function displaySongInfo(artistButton, artistID) {
+  artistButton.addEventListener("click", function () {
+    let table = document.querySelector("#songs");
+    table.innerHTML = "";
+
+    window.songs.forEach(function (song) {
+      let row = document.createElement("tr");
+      let songTitle = document.createElement("a");
+      let yearRecorded = document.createElement("td");
+      let duration = document.createElement("td");
+      if (song.artistId === artistID && song.explicit) {
+        songTitle.textContent = song.title;
+        songTitle.href = song.url;
+        songTitle.target = "_blank";
+        yearRecorded.textContent = song.year;
+        duration.textContent = song.duration;
+        row.appendChild(songTitle);
+        row.appendChild(yearRecorded);
+        row.appendChild(duration);
+        table.appendChild(row);
+      }
+    });
+  });
 }
 
 function makeButtons() {
@@ -68,21 +87,11 @@ function makeButtons() {
     let artistButton = createArtistButton(artist);
     appendArtistButtonToNav(artistButton);
     displayArtistInfo(artistButton, artist);
+    displaySongInfo(artistButton, artist.artistID);
   });
 }
 
-/*
-window.songs.forEach(function (song) {
-  if (song.artistId === 'AID-1') {
-  let table = document.querySelector('#songs');
-  let row = document.createElement("tr");
-  row.innerText = song.title;
-  table.appendChild(row);
-}
-*/
-
 //Ensure everything happens on DOM load up
 window.onload = function () {
-  //For each artist object in the artist array
   makeButtons();
 };
