@@ -57,6 +57,15 @@ function createSocialLinks(artist, selectedArtist) {
   });
 }
 
+function convertDuration(duration) {
+  let minutes = Math.floor(duration / 60);
+  let seconds = duration % 60;
+  if (seconds < 10) {
+    return (duration = minutes + ":" + seconds + "0");
+  }
+  return (duration = minutes + ":" + seconds);
+}
+
 function displaySongInfo(artistButton, artistID) {
   artistButton.addEventListener("click", function () {
     let table = document.querySelector("#songs");
@@ -67,12 +76,12 @@ function displaySongInfo(artistButton, artistID) {
       let songTitle = document.createElement("a");
       let yearRecorded = document.createElement("td");
       let duration = document.createElement("td");
-      if (song.artistId === artistID && song.explicit) {
+      if (song.artistId === artistID && !song.explicit) {
         songTitle.textContent = song.title;
         songTitle.href = song.url;
         songTitle.target = "_blank";
         yearRecorded.textContent = song.year;
-        duration.textContent = song.duration;
+        duration.textContent = convertDuration(song.duration);
         row.appendChild(songTitle);
         row.appendChild(yearRecorded);
         row.appendChild(duration);
