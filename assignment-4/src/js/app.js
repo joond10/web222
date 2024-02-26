@@ -86,6 +86,9 @@ function displaySongInfo(artistButton, artistID) {
         row.appendChild(yearRecorded);
         row.appendChild(duration);
         table.appendChild(row);
+        row.onclick = function () {
+          console.log(song.title);
+        };
       }
     });
   });
