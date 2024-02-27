@@ -19,26 +19,24 @@ const { artists, songs } = window;
 
 // For debugging, display all of our data in the console. You can remove this later.
 console.log({ artists, songs }, "App Data");
+//////////////////////////////////////////////////////////////////
+//Artist info functions
+//////////////////////////////////////////////////////////////////
 
+//Create and return button element
 function createArtistButton(artist) {
   let artistButton = document.createElement("button");
   artistButton.innerText = artist.name;
   return artistButton;
 }
 
-function addToNav(artistButton) {
-  let nav = document.querySelector("#menu");
-  nav.appendChild(artistButton);
+//Append artist button to menu
+function addToMenu(artistButton) {
+  let menu = document.querySelector("#menu");
+  menu.appendChild(artistButton);
 }
 
-function displayArtistInfo(artistButton, artist) {
-  artistButton.addEventListener("click", function () {
-    let selectedArtist = document.querySelector("#selected-artist");
-    selectedArtist.innerText = artist.name + " (";
-    createSocialLinks(artist, selectedArtist);
-  });
-}
-
+//Helper function creates social links
 function createSocialLinks(artist, selectedArtist) {
   artist.url.forEach(function (link, index) {
     let socials = document.createElement("a");
@@ -57,6 +55,20 @@ function createSocialLinks(artist, selectedArtist) {
   });
 }
 
+//Button on click puts artist name and social links in an h2 element
+function displayArtistInfo(artistButton, artist) {
+  artistButton.addEventListener("click", function () {
+    let selectedArtist = document.querySelector("#selected-artist");
+    selectedArtist.innerText = artist.name + " (";
+    createSocialLinks(artist, selectedArtist);
+  });
+}
+
+/////////////////////////////////////////////////////////////////
+//Table creation functions
+/////////////////////////////////////////////////////////////////
+
+//Helper function for converting duration to mm:ss
 function convertDuration(duration) {
   let minutes = Math.floor(duration / 60);
   let seconds = duration % 60;
@@ -65,9 +77,8 @@ function convertDuration(duration) {
   }
   return (duration = minutes + ":" + seconds);
 }
-
+//Dynamic table data creation
 function songDataOnClick(artistID) {
-  //Move event listener function here
   let table = document.querySelector("#songs");
   table.innerHTML = "";
 
@@ -93,16 +104,20 @@ function songDataOnClick(artistID) {
   });
 }
 
+//Button on click displays table
 function displaySongInfo(artistButton, artistID) {
   artistButton.addEventListener("click", function () {
     songDataOnClick(artistID);
   });
 }
 
+///////////////////////////////////////////////////////////////
+//Entry point functions
+///////////////////////////////////////////////////////////////
 function makeButtons() {
   window.artists.forEach(function (artist) {
     let artistButton = createArtistButton(artist);
-    addToNav(artistButton);
+    addToMenu(artistButton);
     displayArtistInfo(artistButton, artist);
     displaySongInfo(artistButton, artist.artistID);
   });
