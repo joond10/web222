@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="Joon Dong" />
+
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./css/water.css" />
+    <!-- New custom stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>Cloudscape</h1>
+      <p>Ambient electronic sounds that come in the color dark blue.</p>
+    </header>
+
+    <nav id="menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
+
+    <hr />
+
+    <main>
+      <h2 id="selected-artist">
+        <!-- Dynamically update the selected category title -->
+      </h2>
+
+      <div id="row">
+        <!-- Dynamically add song cards -->
+      </div>
+    </main>
+
+    <footer>
+      <div id="container">
+        <div class="form-wrap">
+          <h1>Join our newsletter!</h1>
+          <p>Get weekly updates on the latest rotation of songs from Cloudscape and new music to explore.</p>
+          <!-- Default method is get which puts data on a URL whereas post will use the body of the HTTP request -->
+          <!-- Action is where the data gets sent to -->
+          <!-- Type is what the user is expected to enter -->
+          <form action="https://httpbin.org/post" method="post">
+            <div class="form-group">
+              <input type="email" name="email" id="email" placeholder="Email address" spellcheck="false"
+              autocomplete="off" />
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+          </form>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
