@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Artist</title>
+    <link rel="stylesheet" href="./css/water.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Artist Request Form</h1>
+    <p>Want to see us showcase your favorite artist?</p>
+    <a href="./index.html">
+      <button>Home</button>
+    </a>
+    <form action="https://httpbin.org/post" method="POST">
+      <label for="artist-name"><span class="red-asterisk">* </span>Artist Name</label>
+      <input id="artist-name" name="artist-name" type="text" tabindex="1" required />
+
+      <label for="music-genre">Music Genre</label>
+      <input
+        id="music-genre"
+        name="music-genre"
+        type="text"
+        tabindex="2"
+        autocomplete="on"
+        list="music-genres"
+        pattern="[A-Z]"
+      />
+
+      <datalist id="music-genres">
+        <option value="Electronic"></option>
+        <option value="Rap"></option>
+        <option value="Jazz"></option>
+        <option value="Soundtrack"></option>
+        <option value="Rock"></option>
+        <option value="Pop"></option>
+        <option value="Classical"></option>
+        <option value="R&B"></option>
+        <option value="Country"></option>
+        <option value="Dance"></option>
+        <option value="Other"></option>
+      </datalist>
+
+      <label for="url">Social Media</label>
+      <input id="url" name="social-media" type="url" tabindex="3" autocomplete="on" />
+
+      <div id="links">
+        <label for="song-links">Song Links</label>
+        <input type="url" id="song-links" name="song-links" tabindex="4" />
+      </div>
+      <button class="add" type="button">Add another</button>
+      <br />
+      <label for="explicit">Explicit</label>
+      <input id="explicit" name="explicit" type="checkbox" tabindex="5" />
+
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="5"
+        placeholder="Why this artist?"
+        tabindex="6"
+      ></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

@@ -31,3 +31,12 @@
 .card:hover img {
   cursor: pointer;
 }
+
+.new-artist {
+  text-decoration: none;
+  color: white;
+}
+
+.red-asterisk {
+  color: red;
+}
